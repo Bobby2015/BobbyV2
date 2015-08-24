@@ -20,10 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Parser\Parser.h" />
+    <ClInclude Include="src\Utilities\CoreUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp" />
     <ClCompile Include="src\Parser\Parser.cpp" />
+    <ClCompile Include="src\Utilities\CoreUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Tests\Unit tests folder.txt" />
