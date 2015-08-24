@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-	
-	cout << "Hello World " << add(3, 5) << endl;
+	Parse testParser;
+	cout << "Hello World " << testParser.add(3, 5) << endl;
 	cin.get();
 
 	return 0;

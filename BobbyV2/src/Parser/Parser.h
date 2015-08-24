@@ -1,8 +1,16 @@
-
 #ifndef PARSER_PARSER_H
 #define PARSER_PARSER_H
 
-int add(unsigned x, unsigned y);
+class Parse
+{
+	public:
+		int add(unsigned x, unsigned y);
+		Parse();
+		~Parse();
+	private:
+		unsigned first;
+		unsigned second;
+}; // Parse
 
 #endif  // PARSER_H
 
