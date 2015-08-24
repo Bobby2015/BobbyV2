@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Parser\Parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application\main.cpp" />
+    <ClCompile Include="src\Parser\Parser.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9114FD21-ADC6-4FB9-B311-DC561E23A719}</ProjectGuid>
     <RootNamespace>BobbyV2</RootNamespace>
@@ -117,9 +124,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
