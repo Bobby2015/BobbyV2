@@ -11,6 +11,7 @@ class CLI
 	public:
 		CLI();
 		~CLI();
+
 		void startProgramLoop();
 		std::string promptUserForInput();
 		void processUserInput(std::string);
@@ -21,7 +22,10 @@ class CLI
 		void exitProgram();
 		
 	private:
-		bool exitFlag;	
+		bool exitFlag;
+		static const std::string MESSAGE_PROMPT_FOR_INPUT;
+
+		static const std::string USER_INPUT_EXIT;
 };
 
 #endif 

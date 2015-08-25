@@ -6,6 +6,8 @@
 
 CLI::CLI()
 {
+	const std::string MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
+	const std::string USER_INPUT_EXIT = "exit";
 	setExitFlag(false);
 }
 
@@ -38,14 +40,14 @@ void CLI::startProgramLoop()
 std::string CLI::promptUserForInput() 
 {
 	std::string userInput;
-	std::cout << "Enter file path of program source (type \"exit\" to quit the program): " ;
+	std::cout << MESSAGE_PROMPT_FOR_INPUT;
 	std::getline (std::cin, userInput);
 	return userInput;
 }
 
 void CLI::processUserInput(std::string userInput)
 {
-	if (userInput == "exit") 
+	if (userInput == USER_INPUT_EXIT) 
 	{
 		exitProgram();
 	} 
