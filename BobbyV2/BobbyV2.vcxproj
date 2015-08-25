@@ -21,12 +21,14 @@
   <ItemGroup>
     <ClInclude Include="src\Parser\Parser.h" />
     <ClInclude Include="src\PKB\PKB.h" />
+    <ClInclude Include="src\UI\CLI.h" />
     <ClInclude Include="src\Utilities\CoreUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp" />
     <ClCompile Include="src\Parser\Parser.cpp" />
     <ClCompile Include="src\PKB\PKB.cpp" />
+    <ClCompile Include="src\UI\CLI.cpp" />
     <ClCompile Include="src\Utilities\CoreUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
