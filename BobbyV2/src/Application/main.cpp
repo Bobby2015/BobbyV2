@@ -1,14 +1,16 @@
 //test
 #include <iostream>
 #include "../Parser/Parser.h"
+#include "../UI/CLI.h"
 
 using namespace std;
 
 int main()
 {
 	Parse testParser;
-	cout << "Hello World " << testParser.add(3, 5) << endl;
-	cin.get();
+	CLI cli;
+
+	cli.startProgramLoop();
 
 	return 0;
 }
