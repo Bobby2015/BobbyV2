@@ -12,7 +12,7 @@ class CLI
 		CLI();
 		~CLI();
 		void startProgramLoop();
-		void promptUserForProgSrcFile();
+		std::string promptUserForInput();
 		void processUserInput(std::string);
 
 		void setExitFlag(bool);

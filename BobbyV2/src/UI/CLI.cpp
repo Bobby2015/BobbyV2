@@ -26,7 +26,8 @@ void CLI::startProgramLoop()
 {
 	while (!exitFlag)
 	{
-		promptUserForProgSrcFile();
+		std::string userInput = promptUserForInput();
+		processUserInput(userInput);
 	}
 }
 
@@ -34,11 +35,12 @@ void CLI::startProgramLoop()
 // User Prompts //
 //--------------//
 
-void CLI::promptUserForProgSrcFile() 
+std::string CLI::promptUserForInput() 
 {
 	std::string userInput;
 	std::cout << "Enter file path of program source (type \"exit\" to quit the program): " ;
 	std::getline (std::cin, userInput);
+	return userInput;
 }
 
 void CLI::processUserInput(std::string userInput)
