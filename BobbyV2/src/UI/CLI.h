@@ -1,10 +1,12 @@
-#pragma once
-#ifndef CLI_H
-#define CLI_H
+
+#ifndef UI_CLI_H
+#define UI_CLI_H
 
 #include <string>
 #include <iostream>
 #include <fstream>
+
+using namespace std;
 
 class CLI
 {

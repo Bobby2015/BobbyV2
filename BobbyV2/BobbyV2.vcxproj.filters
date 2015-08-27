@@ -16,36 +16,63 @@
     <Filter Include="Tests">
       <UniqueIdentifier>{b9beb818-b101-441c-ab53-3d0ce32497ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{7d951b48-669d-46b7-a416-9c92a16292b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application">
+      <UniqueIdentifier>{d54159a7-7e3e-4b6b-a38f-a81e8631fff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Parser">
+      <UniqueIdentifier>{35d1e41f-2824-4d59-9f10-00fa4a7ce350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{bf09f967-4f40-4d90-9e56-da6fe5c8b0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB">
+      <UniqueIdentifier>{eb2a3fe6-1844-4843-803b-7e7d305156df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB">
+      <UniqueIdentifier>{ad938427-452f-4391-8409-ddbf8d1c75db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{25643787-26da-4086-81e0-f82f6cfa0f0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{d7835867-43d6-486d-bb96-15087ad36c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Parser">
+      <UniqueIdentifier>{bc2b2601-e449-4d2f-aac6-782b9043c923}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Parser\Parser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Utilities\CoreUtilities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\PKB\PKB.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\PKB</Filter>
     </ClInclude>
     <ClInclude Include="src\UI\CLI.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\CoreUtilities.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Parser\Parser.h">
+      <Filter>Header Files\Parser</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Parser\Parser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Application\main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Application</Filter>
     </ClCompile>
-    <ClCompile Include="src\Utilities\CoreUtilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PKB\PKB.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Parser\Parser.cpp">
+      <Filter>Source Files\Parser</Filter>
     </ClCompile>
     <ClCompile Include="src\UI\CLI.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\CoreUtilities.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PKB\PKB.cpp">
+      <Filter>Source Files\PKB</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

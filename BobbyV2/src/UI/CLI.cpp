@@ -4,10 +4,11 @@
 // Constructor //
 //-------------//
 
+const string CLI::MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
+const string CLI::USER_INPUT_EXIT = "exit";
+
 CLI::CLI()
 {
-	const std::string MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
-	const std::string USER_INPUT_EXIT = "exit";
 	setExitFlag(false);
 }
 
