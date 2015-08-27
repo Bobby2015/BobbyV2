@@ -4,14 +4,15 @@
 class Parse
 {
 	public:
-		int add(unsigned x, unsigned y);
 		Parse();
 		~Parse();
+		int add(unsigned x, unsigned y);
+
 	private:
 		unsigned first;
 		unsigned second;
 }; // Parse
 
-#endif  // PARSER_H
+#endif  // PARSER_PARSER_H
 
 #pragma once
