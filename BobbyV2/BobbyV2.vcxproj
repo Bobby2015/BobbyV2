@@ -24,6 +24,7 @@
     <ClInclude Include="src\PQLParser\PQLEngine.h" />
     <ClInclude Include="src\PQLParser\PQLParser.h" />
     <ClInclude Include="src\UI\CLI.h" />
+    <ClInclude Include="src\UI\FileProcessor.h" />
     <ClInclude Include="src\Utilities\CoreUtilities.h" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +34,7 @@
     <ClCompile Include="src\PQLParser\PQLEngine.cpp" />
     <ClCompile Include="src\PQLParser\PQLParser.cpp" />
     <ClCompile Include="src\UI\CLI.cpp" />
+    <ClCompile Include="src\UI\FileProcessor.cpp" />
     <ClCompile Include="src\Utilities\CoreUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>

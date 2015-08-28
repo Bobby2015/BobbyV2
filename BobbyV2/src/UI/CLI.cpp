@@ -1,11 +1,12 @@
-#include "CLI.h"
+#include "../UI/CLI.h"
+#include "../UI/FileProcessor.h"
 
 //-------------//
 // Constructor //
 //-------------//
 
-const string CLI::MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
-const string CLI::USER_INPUT_EXIT = "exit";
+const std::string CLI::MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
+const std::string CLI::USER_INPUT_EXIT = "exit";
 
 CLI::CLI()
 {
@@ -55,7 +56,8 @@ void CLI::processUserInput(std::string userInput)
 
 	else
 	{
-		
+		FileProcessor fileProcessor;
+		fileProcessor.attemptToOpenFile(userInput);
 	}
 }
 

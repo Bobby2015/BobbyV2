@@ -15,7 +15,7 @@ PqlEngine::~PqlEngine()
 
 }
 
-bool PqlEngine::executeQuery(string query) {
+bool PqlEngine::executeQuery(std::string query) {
 
 	bool isSuccess = false;
 

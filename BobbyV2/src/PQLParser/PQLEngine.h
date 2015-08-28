@@ -1,13 +1,15 @@
 #ifndef PQLPARSER_PQLENGINE_H
 #define PQLPARSER_PQLENGINE_H
 
+#include <string>
+
 
 class PqlEngine
 {
 public:
 	PqlEngine();
 	~PqlEngine();
-	bool executeQuery(string query);
+	bool executeQuery(std::string query);
 
 private:
 
