@@ -1,12 +1,9 @@
 #include "../UI/CLI.h"
-#include "../UI/FileProcessor.h"
+
 
 //-------------//
 // Constructor //
 //-------------//
-
-const std::string CLI::MESSAGE_PROMPT_FOR_INPUT = "Enter file path of program source (type \"exit\" to quit the program): ";
-const std::string CLI::USER_INPUT_EXIT = "exit";
 
 CLI::CLI()
 {
@@ -30,35 +27,81 @@ void CLI::startProgramLoop()
 {
 	while (!exitFlag)
 	{
-		std::string userInput = promptUserForInput();
+		displayMenu();
+		int userInput = promptUserForInput();
 		processUserInput(userInput);
 	}
 }
 
-//--------------//
-// User Prompts //
-//--------------//
-
-std::string CLI::promptUserForInput() 
+void CLI::displayMenu()
 {
-	std::string userInput;
-	std::cout << MESSAGE_PROMPT_FOR_INPUT;
-	std::getline (std::cin, userInput);
+	std::cout << "Select an option by entering one of the numbers below: " << std::endl;
+	std::cout << "(1) Parse program source file" << std::endl;
+	std::cout << "(2) Make a query to source file" << std::endl;
+	std::cout << "(3) Display current source file" << std::endl;
+	std::cout << "(4) Exit" << std::endl;
+}
+
+//-----------------------//
+// User Input Processing //
+//-----------------------//
+
+int CLI::promptUserForInput() 
+{
+	int userInput;
+
+	std::cin >> userInput;
+	std::cin.ignore();
 	return userInput;
 }
 
-void CLI::processUserInput(std::string userInput)
+void CLI::processUserInput(int userInput)
 {
-	if (userInput == USER_INPUT_EXIT) 
+	switch (userInput)
 	{
-		exitProgram();
-	} 
+		case PARSE_PROGRAM_FILE:
+			parseProgSrcFile();
+			break;
 
-	else
-	{
-		FileProcessor fileProcessor;
-		fileProcessor.attemptToOpenFile(userInput);
+		case EXIT_PROGRAM:
+			exitProgram();
+			break;
+
+		default:
+			std::cout << "invalid user input!" << std::endl;
+			break;
+
 	}
+}
+
+//------------------//
+// SPA Menu Options //
+//------------------//
+
+void CLI::parseProgSrcFile()
+{
+	std::string fileName;
+	FileProcessor fileProcessor;
+	Parse parser;
+
+	std::cout << "Enter program source file name: ";
+	std::getline(std::cin, fileName);
+
+	std::vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
+	std::cout << "Parsing file to Program Knowledge Base..." << std::endl;
+
+	// insert code for file parsing
+	std::cout << std::endl;
+}
+
+void CLI::makeQuery()
+{
+	// insert code here
+}
+
+void CLI::displayFileContents()
+{
+	// insert code here
 }
 
 void CLI::exitProgram()

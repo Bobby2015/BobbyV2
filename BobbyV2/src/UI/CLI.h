@@ -1,31 +1,53 @@
-
 #ifndef UI_CLI_H
 #define UI_CLI_H
 
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "../UI/FileProcessor.h"
+#include "../Parser/Parser.h"
 
 class CLI
 {
 	public:
+		// enum for user input options
+		enum UserInputOptions : int
+		{
+			PARSE_PROGRAM_FILE = 1,
+			MAKE_QUERY,
+			DISPLAY_FILE_CONTENTS,
+			EXIT_PROGRAM
+		};
+
+		// constructor and destructor
 		CLI();
 		~CLI();
 
+		// main program loop
 		void startProgramLoop();
-		std::string promptUserForInput();
-		void processUserInput(std::string);
 
+		// menu display
+		void displayMenu();
+
+		// user input processing
+		int promptUserForInput();
+		void processUserInput(int);
+
+		// SPA options
+		void parseProgSrcFile();
+		void makeQuery();
+		void displayFileContents();
+		void exitProgram();
+
+		// getters and setters
 		void setExitFlag(bool);
 		bool getExitFlag();
 
-		void exitProgram();
-		
 	private:
-		bool exitFlag;
-		static const std::string MESSAGE_PROMPT_FOR_INPUT;
+		FileProcessor fileProcessor;
+		Parse parser;
 
-		static const std::string USER_INPUT_EXIT;
+		bool exitFlag;
 };
 
 #endif 

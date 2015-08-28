@@ -66,11 +66,11 @@
     <ClInclude Include="src\PQLParser\PQLParser.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
-    <ClInclude Include="src\PQLParser\PQLEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\UI\FileProcessor.h">
       <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PQLParser\PQLEngine.h">
+      <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

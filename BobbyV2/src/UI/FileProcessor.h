@@ -16,9 +16,11 @@ class FileProcessor
 		FileProcessor();
 		~FileProcessor();
 
-		// File initialization
-		void attemptToOpenFile(std::string fileName);
-		bool fileExists(std::string fileName);
+		// Checking for file existence
+		bool fileExists(std::string&);
+
+		// Conversion of file content
+		std::vector<char> convertFileContentsToCharArray(std::string&);
 				
 	private:
 
