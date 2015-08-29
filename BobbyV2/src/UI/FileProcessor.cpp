@@ -44,6 +44,12 @@ std::vector<char> FileProcessor::convertFileContentsToCharArray(std::string &fil
 		std::cout << "Processing contents of " + fileName + "..." << std::endl;
 
 		std::ifstream infile(fileName);
+		std::string line;
+		while (std::getline(infile, line)) // To get you all the lines.
+		{
+			std::cout << line; // Prints our STRING.
+		}
+		infile.close();
 		std::vector<char> fileContents((std::istreambuf_iterator<char>(infile)), (std::istreambuf_iterator<char>()));
 		
 		return fileContents;
