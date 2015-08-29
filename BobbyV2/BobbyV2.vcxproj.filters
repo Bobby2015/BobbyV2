@@ -103,7 +103,7 @@
     <Text Include="Tests\Unit tests folder.txt">
       <Filter>Tests</Filter>
     </Text>
-    <Text Include="..\..\..\..\Desktop\program_correct_a.txt">
+    <Text Include="First.txt">
       <Filter>Tests</Filter>
     </Text>
   </ItemGroup>
