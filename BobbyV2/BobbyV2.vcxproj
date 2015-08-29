@@ -38,6 +38,7 @@
     <ClCompile Include="src\Utilities\CoreUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\..\Desktop\program_correct_a.txt" />
     <Text Include="Tests\Unit tests folder.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

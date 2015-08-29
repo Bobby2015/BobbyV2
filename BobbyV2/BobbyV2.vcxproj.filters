@@ -103,5 +103,8 @@
     <Text Include="Tests\Unit tests folder.txt">
       <Filter>Tests</Filter>
     </Text>
+    <Text Include="..\..\..\..\Desktop\program_correct_a.txt">
+      <Filter>Tests</Filter>
+    </Text>
   </ItemGroup>
 </Project>
