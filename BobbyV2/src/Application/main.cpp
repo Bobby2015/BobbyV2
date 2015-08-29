@@ -1,8 +1,5 @@
 //test
-#include <iostream>
 #include "../UI/CLI.h"
-
-using namespace std;
 
 int main()
 {

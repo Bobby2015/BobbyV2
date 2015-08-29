@@ -1,6 +1,5 @@
 #include "../UI/CLI.h"
 
-
 //-------------//
 // Constructor //
 //-------------//
@@ -63,6 +62,14 @@ void CLI::processUserInput(int userInput)
 			parseProgSrcFile();
 			break;
 
+		case MAKE_QUERY:
+			makeQuery();
+			break;
+
+		case DISPLAY_FILE_CONTENTS:
+			displayFileContents();
+			break;
+
 		case EXIT_PROGRAM:
 			exitProgram();
 			break;
@@ -88,9 +95,10 @@ void CLI::parseProgSrcFile()
 	std::getline(std::cin, fileName);
 
 	std::vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
-	std::cout << "Parsing file to Program Knowledge Base..." << std::endl;
-
+	
 	// insert code for file parsing
+	std::cout << "Parsing file to Program Knowledge Base..." << std::endl;
+	
 	std::cout << std::endl;
 }
 

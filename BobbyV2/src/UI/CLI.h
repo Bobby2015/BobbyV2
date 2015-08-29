@@ -3,7 +3,6 @@
 
 #include <string>
 #include <iostream>
-#include <fstream>
 #include "../UI/FileProcessor.h"
 #include "../Parser/Parser.h"
 
@@ -33,7 +32,7 @@ class CLI
 		int promptUserForInput();
 		void processUserInput(int);
 
-		// SPA options
+		// SPA menu options
 		void parseProgSrcFile();
 		void makeQuery();
 		void displayFileContents();
