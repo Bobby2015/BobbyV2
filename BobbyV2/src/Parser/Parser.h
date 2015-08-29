@@ -1,12 +1,18 @@
 #ifndef PARSER_PARSER_H
 #define PARSER_PARSER_H
 
+#include <iostream>
+#include <string>
+
 class Parse
 {
 	public:
 		Parse();
 		~Parse();
 		int add(unsigned x, unsigned y);
+
+		// validate concrete syntax of the source code
+		void concreteSyntaxValidator(std::string);
 
 	private:
 		unsigned first;

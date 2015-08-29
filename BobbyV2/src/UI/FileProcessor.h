@@ -9,8 +9,6 @@
 #include <vector>
 #include <sys/stat.h>
 
-#include <iterator>
-
 class FileProcessor
 {
 	public:

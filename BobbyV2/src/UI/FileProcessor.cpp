@@ -55,12 +55,12 @@ std::string FileProcessor::copyFileContentsToString(std::string &fileName)
 
 	if (!fileExists(fileName))
 	{
-		std::cout << "File does not exist!" << std::endl;
+		std::cout << "[FileProcessor] File does not exist!" << std::endl;
 	}
 
 	else
 	{
-		std::cout << "Processing contents of " + fileName + "..." << std::endl;
+		std::cout << "[FileProcessor] Processing contents of " + fileName + "..." << std::endl;
 
 		std::ifstream in(fileName, std::ios::in | std::ios::binary);
 		if (in)
@@ -71,27 +71,6 @@ std::string FileProcessor::copyFileContentsToString(std::string &fileName)
 			in.seekg(0, std::ios::beg);
 			in.read(&contents[0], contents.size());
 			in.close();
-
-			/*
-			std::string str2("procedure");
-			std::size_t found = contents.find(str2);
-
-			if (found != std::string::npos)
-				std::cout << "first 'procedure' found at: " << found << '\n';
-			found = contents.find("procedure", found + 1, 6);
-			if (found != std::string::npos)
-				std::cout << "second 'procedure' found at: " << found << '\n';
-			*/
-			std::string delimiter = "\n";
-
-			size_t pos = 0;
-			std::string token;
-			while ((pos = contents.find(delimiter)) != std::string::npos) {
-				token = contents.substr(0, pos);
-				std::cout << token << std::endl;
-				contents.erase(0, pos + delimiter.length());
-			}
-			std::cout << contents << std::endl;
 
 			return contents;
 		}
