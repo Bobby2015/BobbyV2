@@ -95,6 +95,7 @@ void CLI::parseProgSrcFile()
 	std::getline(std::cin, fileName);
 
 	std::vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
+	std::string fileContentString = fileProcessor.copyFileContentsToString(fileName);
 	
 	// insert code for file parsing
 	std::cout << "Parsing file to Program Knowledge Base..." << std::endl;

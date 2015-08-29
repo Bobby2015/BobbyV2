@@ -9,6 +9,8 @@
 #include <vector>
 #include <sys/stat.h>
 
+#include <iterator>
+
 class FileProcessor
 {
 	public:
@@ -21,6 +23,9 @@ class FileProcessor
 
 		// Conversion of file content
 		std::vector<char> convertFileContentsToCharArray(std::string&);
+
+		// Conversion of file content
+		std::string copyFileContentsToString(std::string&);
 				
 	private:
 
