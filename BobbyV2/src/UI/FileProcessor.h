@@ -20,9 +20,6 @@ class FileProcessor
 		bool fileExists(std::string&);
 
 		// Conversion of file content
-		std::vector<char> convertFileContentsToCharArray(std::string&);
-
-		// Conversion of file content
 		std::string copyFileContentsToString(std::string&);
 				
 	private:

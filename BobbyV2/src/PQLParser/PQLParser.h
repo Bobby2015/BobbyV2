@@ -3,12 +3,14 @@
 
 #include <string>
 
+#include "PQLEngine.h"
+
 class PqlParserFacade
 {
 public:
 	PqlParserFacade();
 	~PqlParserFacade();
-	bool executeQuery(std::string query);
+	bool executeQuery(std::string);
 
 private:
 

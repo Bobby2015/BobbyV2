@@ -15,11 +15,14 @@ PqlParserFacade::~PqlParserFacade()
 
 }
 
-bool PqlParserFacade::executeQuery(string query) {
+bool PqlParserFacade::executeQuery(string query) 
+{
 
 	bool isSuccess = false;
 
-	//execute query
+	PqlEngine pqlEngine;
+
+	isSuccess = pqlEngine.executeQuery(query);
 
 	return isSuccess;
 }

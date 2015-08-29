@@ -2,18 +2,19 @@
 #define PQLPARSER_PQLENGINE_H
 
 #include <string>
-
+#include <iostream>
 
 class PqlEngine
 {
 public:
 	PqlEngine();
 	~PqlEngine();
-	bool executeQuery(std::string query);
-
+	bool executeQuery(std::string);
+	
 private:
+	bool concreteSyntaxValidator(std::string);
 
-}; // PqlParserFacade
+}; // PqlEngine
 
 #endif  // PQLPARSER_PQLENGINE_H
 

@@ -15,11 +15,27 @@ PqlEngine::~PqlEngine()
 
 }
 
-bool PqlEngine::executeQuery(std::string query) {
+bool PqlEngine::executeQuery(string query) 
+{
 
 	bool isSuccess = false;
 
-	//execute query
+	bool isSuccessSyntax = concreteSyntaxValidator(query);
+
+	if (isSuccessSyntax)
+	{
+		
+	}
+
+	return isSuccess;
+}
+
+bool PqlEngine::concreteSyntaxValidator(std::string query) 
+{
+
+	bool isSuccess = false;
+
+	std::cout << "validating..";
 
 	return isSuccess;
 }

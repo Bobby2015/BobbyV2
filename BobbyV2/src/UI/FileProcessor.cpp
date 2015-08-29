@@ -35,24 +35,6 @@ bool FileProcessor::fileExists(string &fileName)
 // Conversion of File Contents //
 //-----------------------------//
 
-vector<char> FileProcessor::convertFileContentsToCharArray(string &fileName)
-{
-	if (!fileExists(fileName))
-	{
-		cout << "File does not exist!" << endl;
-	}
-
-	else 
-	{
-		cout << "Processing contents of " + fileName + "..." << endl;
-
-		ifstream infile(fileName); //opening an input stream for file test.txt
-		vector<char> fileContents((istreambuf_iterator<char>(infile)), (istreambuf_iterator<char>()));
-		
-		return fileContents;
-	}
-}
-
 string FileProcessor::copyFileContentsToString(string &fileName)
 {
 
