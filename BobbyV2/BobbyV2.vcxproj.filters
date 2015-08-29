@@ -72,6 +72,9 @@
     <ClInclude Include="src\PQLParser\PQLEngine.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
+    <ClInclude Include="src\PQLParser\PQLValidator.h">
+      <Filter>Header Files\PQLParser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp">
@@ -97,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="src\UI\FileProcessor.cpp">
       <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PQLParser\PQLValidator.cpp">
+      <Filter>Source Files\PQLParser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

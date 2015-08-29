@@ -2,7 +2,8 @@
 #define PQLPARSER_PQLENGINE_H
 
 #include <string>
-#include <iostream>
+
+#include "PQLValidator.h"
 
 class PqlEngine
 {
@@ -12,7 +13,7 @@ public:
 	bool executeQuery(std::string);
 	
 private:
-	bool concreteSyntaxValidator(std::string);
+	bool validateQuery(std::string);
 
 }; // PqlEngine
 

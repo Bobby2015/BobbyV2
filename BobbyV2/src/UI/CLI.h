@@ -3,8 +3,10 @@
 
 #include <string>
 #include <iostream>
+
 #include "../UI/FileProcessor.h"
 #include "../Parser/Parser.h"
+#include "../PQLParser/PQLParser.h"
 
 class CLI
 {
@@ -13,9 +15,9 @@ class CLI
 		enum UserInputOptions : int
 		{
 			PARSE_PROGRAM_FILE = 1,
-			MAKE_QUERY,
-			DISPLAY_FILE_CONTENTS,
-			EXIT_PROGRAM
+			MAKE_QUERY = 2,
+			DISPLAY_FILE_CONTENTS = 3,
+			EXIT_PROGRAM = 4
 		};
 
 		// constructor and destructor

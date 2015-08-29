@@ -109,7 +109,13 @@ void CLI::parseProgSrcFile()
 
 void CLI::makeQuery()
 {
-	// insert code here
+	string pqlQuery;
+	PqlParserFacade pqlParser;
+
+	cout << "Enter your query: ";
+	getline(cin, pqlQuery);
+
+	pqlParser.executeQuery(pqlQuery);
 }
 
 void CLI::displayFileContents()

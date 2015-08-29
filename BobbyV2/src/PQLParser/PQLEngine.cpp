@@ -20,22 +20,18 @@ bool PqlEngine::executeQuery(string query)
 
 	bool isSuccess = false;
 
-	bool isSuccessSyntax = concreteSyntaxValidator(query);
-
-	if (isSuccessSyntax)
-	{
-		
-	}
+	isSuccess = validateQuery(query);
+	
 
 	return isSuccess;
 }
 
-bool PqlEngine::concreteSyntaxValidator(std::string query) 
+bool PqlEngine::validateQuery(string query)
 {
+	PQLValidator pqlValidator;
 
-	bool isSuccess = false;
-
-	std::cout << "validating..";
+	bool isSuccess = pqlValidator.validateQuery(query);
 
 	return isSuccess;
 }
+
