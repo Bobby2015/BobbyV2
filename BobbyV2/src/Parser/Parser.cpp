@@ -1,4 +1,7 @@
 #include "Parser.h"
+#include <string>
+
+using namespace std;
 
 // Constructor
 Parse::Parse() 
@@ -18,7 +21,7 @@ int Parse::add(unsigned x, unsigned y)
 	return x + y;
 }
 
-void Parse::concreteSyntaxValidator(std::string contents) {
+void Parse::concreteSyntaxValidator(string contents) {
 
 	/*
 		Regular expression
@@ -33,76 +36,76 @@ void Parse::concreteSyntaxValidator(std::string contents) {
 	*/
 
 	contents = contents + "\n"; // add newline at EOF to prevent omitting last line 
-	std::string delimiter = "\n"; // split string by newline
+	string delimiter = "\n"; // split string by newline
 	size_t pos = 0;	// initial position
-	std::string token; // individual item after split
+	string token; // individual item after split
 
-	while ((pos = contents.find(delimiter)) != std::string::npos) {
+	while ((pos = contents.find(delimiter)) != string::npos) {
 		
 		token = contents.substr(0, pos);
 		
-		std::smatch procedure_matches;
-		std::regex procedure("^\\s*procedure\\s*(\\w{1,})\\s*\\{\\s*");
+		smatch procedure_matches;
+		regex procedure("^\\s*procedure\\s*(\\w{1,})\\s*\\{\\s*");
 
-		std::smatch ifstmt_matches;
-		std::regex ifstmt("^\\s*if\\s+(\\w{1,})\\s+then\\s+\\{\\s*");
+		smatch ifstmt_matches;
+		regex ifstmt("^\\s*if\\s+(\\w{1,})\\s+then\\s+\\{\\s*");
 
-		std::smatch else_matches;
-		std::regex elsestmt("^\\s*else\\s+(\\{)\\s*");
+		smatch else_matches;
+		regex elsestmt("^\\s*else\\s+(\\{)\\s*");
 
-		std::smatch while_matches;
-		std::regex whilestmt("^\\s*while\\s+(\\w{1,})\\s+\\{\\s*");
+		smatch while_matches;
+		regex whilestmt("^\\s*while\\s+(\\w{1,})\\s+\\{\\s*");
 
-		std::smatch call_matches;
-		std::regex call("^\\s*call\\s+(\\w{1,})\\s*\\;\\s*");
+		smatch call_matches;
+		regex call("^\\s*call\\s+(\\w{1,})\\s*\\;\\s*");
 
-		std::smatch assign_matches;
-		std::regex assign("^\\s*(\\w{1,})\\s*=\\s*([^=]*)\\;\\s*");
+		smatch assign_matches;
+		regex assign("^\\s*(\\w{1,})\\s*=\\s*([^=]*)\\;\\s*");
 
-		std::smatch end_matches;
-		std::regex end("^\\s*(\\})\\s*");
+		smatch end_matches;
+		regex end("^\\s*(\\})\\s*");
 
 		
 		/*
 		for (auto result : procedure_matches) {
-			std::cout << "[Parse found procedure] " + std::string(result) << std::endl;
+			cout << "[Parse found procedure] " + string(result) << endl;
 		}
 		*/
 
 		/*
 			Regex matching for all entities and relationships
 		*/
-		std::regex_match(token, procedure_matches, procedure);
-		std::regex_match(token, ifstmt_matches, ifstmt);
-		std::regex_match(token, else_matches, elsestmt);
-		std::regex_match(token, while_matches, whilestmt);
-		std::regex_match(token, call_matches, call);
-		std::regex_match(token, assign_matches, assign);
-		std::regex_match(token, end_matches, end);
+		regex_match(token, procedure_matches, procedure);
+		regex_match(token, ifstmt_matches, ifstmt);
+		regex_match(token, else_matches, elsestmt);
+		regex_match(token, while_matches, whilestmt);
+		regex_match(token, call_matches, call);
+		regex_match(token, assign_matches, assign);
+		regex_match(token, end_matches, end);
 		
 		/*
 			Printing match results
 		*/
 		if (!procedure_matches.empty()) {
-			std::cout << "[Parse found procedure] " + std::string(procedure_matches[0]) << std::endl;
+			cout << "[Parse found procedure] " + string(procedure_matches[0]) << endl;
 		}
 		if (!ifstmt_matches.empty()) {
-			std::cout << "[Parse found if] " + std::string(ifstmt_matches[0]) << std::endl;
+			cout << "[Parse found if] " + string(ifstmt_matches[0]) << endl;
 		}
 		if (!else_matches.empty()) {
-			std::cout << "[Parse found else] " + std::string(else_matches[0]) << std::endl;
+			cout << "[Parse found else] " + string(else_matches[0]) << endl;
 		}
 		if (!while_matches.empty()) {
-			std::cout << "[Parse found while] " + std::string(while_matches[0]) << std::endl;
+			cout << "[Parse found while] " + string(while_matches[0]) << endl;
 		}
 		if (!call_matches.empty()) {
-			std::cout << "[Parse found call] " + std::string(call_matches[0]) << std::endl;
+			cout << "[Parse found call] " + string(call_matches[0]) << endl;
 		}
 		if (!assign_matches.empty()) {
-			std::cout << "[Parse found assign] " + std::string(assign_matches[0]) << std::endl;
+			cout << "[Parse found assign] " + string(assign_matches[0]) << endl;
 		}
 		if (!end_matches.empty()) {
-			std::cout << "[Parse found end] " + std::string(end_matches[0]) << std::endl;
+			cout << "[Parse found end] " + string(end_matches[0]) << endl;
 		}
 
 		contents.erase(0, pos + delimiter.length());	

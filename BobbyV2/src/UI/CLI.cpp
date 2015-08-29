@@ -1,4 +1,7 @@
 #include "../UI/CLI.h"
+#include <string>
+
+using namespace std;
 
 //-------------//
 // Constructor //
@@ -34,11 +37,11 @@ void CLI::startProgramLoop()
 
 void CLI::displayMenu()
 {
-	std::cout << "Select an option by entering one of the numbers below: " << std::endl;
-	std::cout << "(1) Parse program source file" << std::endl;
-	std::cout << "(2) Make a query to source file" << std::endl;
-	std::cout << "(3) Display current source file" << std::endl;
-	std::cout << "(4) Exit" << std::endl;
+	cout << "Select an option by entering one of the numbers below: " << endl;
+	cout << "(1) Parse program source file" << endl;
+	cout << "(2) Make a query to source file" << endl;
+	cout << "(3) Display current source file" << endl;
+	cout << "(4) Exit" << endl;
 }
 
 //-----------------------//
@@ -49,8 +52,8 @@ int CLI::promptUserForInput()
 {
 	int userInput;
 
-	std::cin >> userInput;
-	std::cin.ignore();
+	cin >> userInput;
+	cin.ignore();
 	return userInput;
 }
 
@@ -75,7 +78,7 @@ void CLI::processUserInput(int userInput)
 			break;
 
 		default:
-			std::cout << "invalid user input!" << std::endl;
+			cout << "invalid user input!" << endl;
 			break;
 
 	}
@@ -87,21 +90,21 @@ void CLI::processUserInput(int userInput)
 
 void CLI::parseProgSrcFile()
 {
-	std::string fileName;
+	string fileName;
 	FileProcessor fileProcessor;
 	Parse parser;
 
-	std::cout << "Enter program source file name: ";
-	std::getline(std::cin, fileName);
+	cout << "Enter program source file name: ";
+	getline(cin, fileName);
 
-	//std::vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
-	std::string fileContentString = fileProcessor.copyFileContentsToString(fileName);
+	//vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
+	string fileContentString = fileProcessor.copyFileContentsToString(fileName);
 	parser.concreteSyntaxValidator(fileContentString);
 	
 	// insert code for file parsing
-	std::cout << "Parsing file to Program Knowledge Base..." << std::endl;
+	cout << "Parsing file to Program Knowledge Base..." << endl;
 	
-	std::cout << std::endl;
+	cout << endl;
 }
 
 void CLI::makeQuery()

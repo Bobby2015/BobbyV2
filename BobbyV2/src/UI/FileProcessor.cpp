@@ -1,4 +1,7 @@
 #include "../UI/FileProcessor.h"
+#include <string>
+
+using namespace std;
 
 //-------------//
 // Constructor //
@@ -22,7 +25,7 @@ FileProcessor::~FileProcessor()
 // Checking of File Existence //
 //----------------------------//
 
-bool FileProcessor::fileExists(std::string &fileName)
+bool FileProcessor::fileExists(string &fileName)
 {
 	struct stat buffer; // stat represents file status
 	return (stat(fileName.c_str(), &buffer) == 0);
@@ -32,43 +35,43 @@ bool FileProcessor::fileExists(std::string &fileName)
 // Conversion of File Contents //
 //-----------------------------//
 
-std::vector<char> FileProcessor::convertFileContentsToCharArray(std::string &fileName)
+vector<char> FileProcessor::convertFileContentsToCharArray(string &fileName)
 {
 	if (!fileExists(fileName))
 	{
-		std::cout << "File does not exist!" << std::endl;
+		cout << "File does not exist!" << endl;
 	}
 
 	else 
 	{
-		std::cout << "Processing contents of " + fileName + "..." << std::endl;
+		cout << "Processing contents of " + fileName + "..." << endl;
 
-		std::ifstream infile(fileName); //opening an input stream for file test.txt
-		std::vector<char> fileContents((std::istreambuf_iterator<char>(infile)), (std::istreambuf_iterator<char>()));
+		ifstream infile(fileName); //opening an input stream for file test.txt
+		vector<char> fileContents((istreambuf_iterator<char>(infile)), (istreambuf_iterator<char>()));
 		
 		return fileContents;
 	}
 }
 
-std::string FileProcessor::copyFileContentsToString(std::string &fileName)
+string FileProcessor::copyFileContentsToString(string &fileName)
 {
 
 	if (!fileExists(fileName))
 	{
-		std::cout << "[FileProcessor] File does not exist!" << std::endl;
+		cout << "[FileProcessor] File does not exist!" << endl;
 	}
 
 	else
 	{
-		std::cout << "[FileProcessor] Processing contents of " + fileName + "..." << std::endl;
+		cout << "[FileProcessor] Processing contents of " + fileName + "..." << endl;
 
-		std::ifstream in(fileName, std::ios::in | std::ios::binary);
+		ifstream in(fileName, ios::in | ios::binary);
 		if (in)
 		{
-			std::string contents;
-			in.seekg(0, std::ios::end);
+			string contents;
+			in.seekg(0, ios::end);
 			contents.resize(in.tellg());
-			in.seekg(0, std::ios::beg);
+			in.seekg(0, ios::beg);
 			in.read(&contents[0], contents.size());
 			in.close();
 
