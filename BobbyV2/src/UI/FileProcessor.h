@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef FILE_PROCESSOR_H
-#define FILE_PROCESSOR_H
+#ifndef UI_FILEPROCESSOR_H
+#define UI_FILEPROCESSOR_H
 
 #include <iostream>
 #include <string>

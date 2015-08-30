@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef UI_CLI_H
 #define UI_CLI_H
 
