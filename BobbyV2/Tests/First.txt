@@ -1,29 +1,51 @@
-procedure First {
-	x = 2;
-	z = 3;
-	call Second;
+procedure ABC
+{
+  i=1;
+ b=200 ;
+	c= a   ;
+if a then{
+   while beta {
+        oSCar  = 1 * beta + tmp;
+        while tmp {
+          oSCar = I - (k + j1k * chArlie); }	}
+	while x {
+        x = x + 1;
+        if left then {
+          call Second;
+          if right then {
+            Romeo = Romeo - 1;
+            b = 0;
+            c = delta    + l  * width + Romeo; }
+          else {
+            while c {
+              call    Init;
+              c = c -1   	; } 
+            x = x+ 1; }}
+      else   {
+          call Init; } } }
+	else{
+  call Init; 
+}
 }
 
-procedure Second {
-	x = 0;
-	i = 5;
-	while i {
-		x = x + 2 * y;
-		call Third;
-		i = i - 1;
-	}
-	if x then {
-		x = x + 1;
-	}
-	else {
-		z = 1;
-	}
-	z = z + x + i;
-	y = z + 2;
-	x = x * y + z;
-}
-
-procedure Third {
-	z = 5;
-	v = z;
-}
+procedure Second{
+if x   then  {
+  	Y1   	= 0;}
+else  { 
+  if left then {
+          call Init;
+          if right then {
+            Romeo = Romeo - 1;
+            b =0;
+            c = delta  + l  * width + Romeo; }
+          else {
+            while c {
+              call    Init;
+              c = c -1   ;} 
+            x = x+ 1; }		}
+      else   {
+          call Init; }	
+} }
+procedure Init {
+	while a{
+  x1   = 0; } 	}
