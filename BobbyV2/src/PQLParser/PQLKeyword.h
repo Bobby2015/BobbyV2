@@ -2,6 +2,7 @@
 #define PQLPARSER_PQLKEYWORD_H
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -11,10 +12,13 @@ public:
 	PqlKeyword();
 	~PqlKeyword();
 	bool isFunctionKeywordExist(std::string);
+	bool isKeywordExist(std::string);
+	bool isValidKeywordSequence(vector<std::string>);
 
 private:
 	void buildFunctionKeywordMap();
 	void buildKeywordMap();
+	void buildSelectSequenceMap();
 
 }; // PqlKeyword
 

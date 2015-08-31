@@ -5,13 +5,15 @@
 using namespace std;
 
 map<string, bool> functionKeywordMap;
-map<string, int> keywordMap;
+map<string, bool> keywordMap;
+map<string, int[]> selectSequenceMap;
 
 //Constructor
 PqlKeyword::PqlKeyword()
 {
 	buildFunctionKeywordMap();
 	buildKeywordMap();
+	buildSelectSequenceMap();
 }
 
 //Destructor
@@ -21,6 +23,28 @@ PqlKeyword::~PqlKeyword()
 }
 
 bool PqlKeyword::isFunctionKeywordExist(string keywordQuery)
+{
+	bool isFound = false;
+	auto search = keywordMap.find(keywordQuery);
+
+	if (search != keywordMap.end())
+	{
+		isFound = true;
+	}
+
+	return isFound;
+}
+
+bool PqlKeyword::isValidKeywordSequence(vector<string> keywordList)
+{
+	bool isFound = false;
+	
+	//check if the keyword sequence is correct
+
+	return isFound;
+}
+
+bool PqlKeyword::isKeywordExist(string keywordQuery)
 {
 	bool isFound = false;
 	auto search = functionKeywordMap.find(keywordQuery);
@@ -52,5 +76,28 @@ void PqlKeyword::buildFunctionKeywordMap()
 
 void PqlKeyword::buildKeywordMap()
 {
-	//build keyword map with index
+	keywordMap[KEYWORD_STMT] = true;
+	keywordMap[KEYWORD_ASSIGN] = true;
+	keywordMap[KEYWORD_WHILE] = true;
+	keywordMap[KEYWORD_IF] = true;
+	keywordMap[KEYWORD_PROCEDURE] = true;
+	keywordMap[KEYWORD_VARIABLE] = true;
+	keywordMap[KEYWORD_CONSTANT] = true;
+	keywordMap[KEYWORD_PROGLINE] = true;
+	keywordMap[KEYWORD_SELECT] = true;
+}
+
+void PqlKeyword::buildSelectSequenceMap()
+{
+	selectSequenceMap[KEYWORD_SELECT] = { 1 };
+	
+	
+	
+	//selectSequenceMap[KEYWORD_SUCH_THAT] = int[]{ 2, 3 };
+	
+	
+	static const string KEYWORD_SUCH_THAT = "such that";
+	static const string KEYWORD_PATTERN = "pattern";
+	static const string KEYWORD_WITH = "with";
+	static const string KEYWORD_AND = "and";
 }
