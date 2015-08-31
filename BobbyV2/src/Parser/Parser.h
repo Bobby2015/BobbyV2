@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef PARSER_PARSER_H
 #define PARSER_PARSER_H
 
@@ -23,4 +25,4 @@ class Parse
 
 #endif  // PARSER_PARSER_H
 
-#pragma once
+

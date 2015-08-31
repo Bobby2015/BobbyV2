@@ -7,33 +7,34 @@
 
 using namespace std;
 
-// Node type
-enum NODE_TYPE {
-	PROGRAM,
-	PROCEDURE,
-	STATEMENT_LIST,
-	STATEMENT,
-	IF,
-	WHILE,
-	CONSTANT
-};
+namespace AST {
+	// Node type
+	enum NODE_TYPE {
+		PROGRAM,
+		PROCEDURE,
+		STATEMENT_LIST,
+		STATEMENT,
+		IF,
+		WHILE,
+		CONSTANT
+	};
 
-class Node 
-{
-public:
-	Node();
-	~Node();
-	NODE_TYPE getType();
-	Node* getLeftNode();
-	Node* getRightNode();
-	string getData();
+	class Node
+	{
+	public:
+		Node();
+		~Node();
+		NODE_TYPE getType();
+		Node* getLeftNode();
+		Node* getRightNode();
+		string getData();
 
-private:
-	NODE_TYPE nodeType;
-	Node* leftNode;
-	Node* rightNode;
-	// Node data
-	string nodeData;
-};
-
+	private:
+		NODE_TYPE nodeType;
+		Node* leftNode;
+		Node* rightNode;
+		// Node data
+		string nodeData;
+	};
+} // namespace AST
 #endif // PARSER_AST_H

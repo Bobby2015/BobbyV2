@@ -1,5 +1,6 @@
 #include "AST.h"
 
+using namespace AST;
 // Constructor
 Node::Node()
 {
