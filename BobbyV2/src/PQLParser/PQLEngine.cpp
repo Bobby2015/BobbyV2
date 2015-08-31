@@ -1,5 +1,7 @@
 #include "PQLEngine.h"
 #include <string>
+#include <sstream>
+#include <iostream>
 
 using namespace std;
 
@@ -22,6 +24,10 @@ bool PqlEngine::executeQuery(string query)
 
 	isSuccess = validateQuery(query);
 	
+	if (isSuccess == true)
+	{
+		evaluateQuery(query);
+	}
 
 	return isSuccess;
 }
@@ -31,6 +37,23 @@ bool PqlEngine::validateQuery(string query)
 	PQLValidator pqlValidator;
 
 	bool isSuccess = pqlValidator.validateQuery(query);
+
+	return isSuccess;
+}
+
+bool PqlEngine::evaluateQuery(string query)
+{
+	bool isSuccess = false;
+
+	istringstream stream(query);
+
+	while (!stream.eof())
+	{
+		string s1;
+
+		stream >> s1;
+		cout << s1 << endl;
+	}
 
 	return isSuccess;
 }

@@ -14,6 +14,7 @@ public:
 	
 private:
 	bool validateQuery(std::string);
+	bool evaluateQuery(std::string);
 
 }; // PqlEngine
 

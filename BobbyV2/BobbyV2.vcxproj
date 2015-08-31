@@ -19,9 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Parser\AST.h" />
     <ClInclude Include="src\Parser\Parser.h" />
     <ClInclude Include="src\PKB\PKB.h" />
     <ClInclude Include="src\PQLParser\PQLEngine.h" />
+    <ClInclude Include="src\PQLParser\PQLKeyword.h" />
     <ClInclude Include="src\PQLParser\PQLParser.h" />
     <ClInclude Include="src\PQLParser\PQLValidator.h" />
     <ClInclude Include="src\UI\CLI.h" />
@@ -30,9 +32,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp" />
+    <ClCompile Include="src\Parser\AST.cpp" />
     <ClCompile Include="src\Parser\Parser.cpp" />
     <ClCompile Include="src\PKB\PKB.cpp" />
     <ClCompile Include="src\PQLParser\PQLEngine.cpp" />
+    <ClCompile Include="src\PQLParser\PQLKeyword.cpp" />
     <ClCompile Include="src\PQLParser\PQLParser.cpp" />
     <ClCompile Include="src\PQLParser\PQLValidator.cpp" />
     <ClCompile Include="src\UI\CLI.cpp" />
