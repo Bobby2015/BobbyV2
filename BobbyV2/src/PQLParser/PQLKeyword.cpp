@@ -6,7 +6,7 @@ using namespace std;
 
 map<string, bool> functionKeywordMap;
 map<string, bool> keywordMap;
-map<string, int[]> selectSequenceMap;
+map<string, int*> selectSequenceMap;
 
 //Constructor
 PqlKeyword::PqlKeyword()
@@ -89,7 +89,10 @@ void PqlKeyword::buildKeywordMap()
 
 void PqlKeyword::buildSelectSequenceMap()
 {
-	selectSequenceMap[KEYWORD_SELECT] = { 1 };
+	int foo[5];
+	int* bar = foo;
+	selectSequenceMap[KEYWORD_SELECT] = bar;
+
 	
 	
 	
