@@ -81,13 +81,13 @@
     <ClInclude Include="src\PQLParser\PQLKeyword.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
-    <ClInclude Include="src\PKB\PBKInterface.h">
-      <Filter>Header Files\PKB</Filter>
-    </ClInclude>
     <ClInclude Include="src\PKB\PKBStorageProcess.h">
       <Filter>Header Files\PKB</Filter>
     </ClInclude>
     <ClInclude Include="src\PKB\DataTable.h">
+      <Filter>Header Files\PKB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PKB\PKBInterface.h">
       <Filter>Header Files\PKB</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,23 +4,46 @@
 #define PKB_DATATABLE_H
 
 
-class VarTable
+// include all the table process
+class TableWrapper
 {
 public:
 
+
 private:
+
+
+}; //TableWrapper
+
+
+class VarTable
+{
+public:
+	VarTable();
+	~VarTable();
+
+private:
+
+
+
 }; // VarTable
 
 class ProcedureTable
 {
 public:
+	ProcedureTable();
+	~ProcedureTable();
 
 private:
+
+
 }; // ProcedureTable
 
 class StatementTable
 {
 public:
+	StatementTable();
+	~StatementTable();
 
 private:
 }; // StatementTable

@@ -22,7 +22,7 @@
     <ClInclude Include="src\Parser\AST.h" />
     <ClInclude Include="src\Parser\Parser.h" />
     <ClInclude Include="src\PKB\DataTable.h" />
-    <ClInclude Include="src\PKB\PBKInterface.h" />
+    <ClInclude Include="src\PKB\PKBInterface.h" />
     <ClInclude Include="src\PKB\PKB.h" />
     <ClInclude Include="src\PKB\PKBStorageProcess.h" />
     <ClInclude Include="src\PQLParser\PQLEngine.h" />
