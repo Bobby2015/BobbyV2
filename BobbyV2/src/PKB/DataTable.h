@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef PARSER_DATATABLE_H
-#define PARSER_DATATABLE_H
+#ifndef PKB_DATATABLE_H
+#define PKB_DATATABLE_H
 
 
 class VarTable
@@ -88,7 +88,7 @@ public:
 private:
 }; // FollowsTableNext
 
-// I think only 1 table is enough tho
+   // I think only 1 table is enough tho
 class FollowsTablePrev
 {
 public:
@@ -103,7 +103,7 @@ public:
 private:
 }; // NextTableNext
 
-// same for this
+   // same for this
 class NextTablePrev
 {
 public:
@@ -111,7 +111,7 @@ public:
 private:
 }; // NextTablePrev
 
-// this needs redesign i think
+   // this needs redesign i think
 class ParentTable
 {
 public:
@@ -126,4 +126,4 @@ public:
 private:
 }; // ChildTable
 
-#endif // PARSER_DATATABLE_H
+#endif // PKB_DATATABLE_H

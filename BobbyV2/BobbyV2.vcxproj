@@ -20,8 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Parser\AST.h" />
-    <ClInclude Include="src\Parser\DataTable.h" />
     <ClInclude Include="src\Parser\Parser.h" />
+    <ClInclude Include="src\PKB\DataTable.h" />
     <ClInclude Include="src\PKB\PBKInterface.h" />
     <ClInclude Include="src\PKB\PKB.h" />
     <ClInclude Include="src\PKB\PKBStorageProcess.h" />
@@ -36,8 +36,8 @@
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp" />
     <ClCompile Include="src\Parser\AST.cpp" />
-    <ClCompile Include="src\Parser\DataTable.cpp" />
     <ClCompile Include="src\Parser\Parser.cpp" />
+    <ClCompile Include="src\PKB\DataTable.cpp" />
     <ClCompile Include="src\PKB\PKB.cpp" />
     <ClCompile Include="src\PKB\PKBInterface.cpp" />
     <ClCompile Include="src\PKB\PKBStorageProcess.cpp" />
