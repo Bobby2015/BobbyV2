@@ -17,7 +17,7 @@ namespace PKB
 		~QueryEngine();
 
 	private:
-		//pair<string,string>getCalls(string prod1, string prod2);
+		//vector<string>::getCalls(string prod1, string prod2);
 		
 	
 

@@ -39,11 +39,11 @@ vector<string> QueryInterface::getAllCalls()
 
 bool QueryInterface::compareCalls(string procedure1, string procedure2)
 {
-	bool call = false;
+	bool isCall = false;
 
 
 
-	return call;
+	return isCall;
 }
 // FOR CALLS - END
 
