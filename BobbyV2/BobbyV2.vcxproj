@@ -24,7 +24,7 @@
     <ClInclude Include="src\PKB\DataTable.h" />
     <ClInclude Include="src\PKB\PKBInterface.h" />
     <ClInclude Include="src\PKB\PKB.h" />
-    <ClInclude Include="src\PKB\PKBStorageProcess.h" />
+    <ClInclude Include="src\PKB\PKBEngine.h" />
     <ClInclude Include="src\PQLParser\PQLEngine.h" />
     <ClInclude Include="src\PQLParser\PQLKeyword.h" />
     <ClInclude Include="src\PQLParser\PQLParser.h" />
@@ -40,7 +40,7 @@
     <ClCompile Include="src\PKB\DataTable.cpp" />
     <ClCompile Include="src\PKB\PKB.cpp" />
     <ClCompile Include="src\PKB\PKBInterface.cpp" />
-    <ClCompile Include="src\PKB\PKBStorageProcess.cpp" />
+    <ClCompile Include="src\PKB\PKBEngine.cpp" />
     <ClCompile Include="src\PQLParser\PQLEngine.cpp" />
     <ClCompile Include="src\PQLParser\PQLKeyword.cpp" />
     <ClCompile Include="src\PQLParser\PQLParser.cpp" />
