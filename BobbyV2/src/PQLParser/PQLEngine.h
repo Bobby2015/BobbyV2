@@ -2,6 +2,7 @@
 #define PQLPARSER_PQLENGINE_H
 
 #include <string>
+#include <stdlib.h>
 
 #include "PQLValidator.h"
 #include "PQLKeyword.h"
@@ -16,8 +17,13 @@ public:
 	bool executeQuery(string);
 	
 private:
+	PqlKeyword pqlKeyword;
+
 	bool validateQuery(string);
 	bool evaluateQuery(string);
+	bool identifySingleQuery(string);
+	vector<string> separateQuery(string);
+	string fixWhitespace(string);
 
 }; // PqlEngine
 

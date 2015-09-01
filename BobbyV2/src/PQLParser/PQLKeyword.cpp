@@ -11,34 +11,32 @@ map<string, int*> selectSequenceMap;
 
 //Function Keywords
 const string PqlKeyword::FN_CALLS = "Calls";
+const string PqlKeyword::FN_CALLS_STAR = "Calls*";
+const string PqlKeyword::FN_MODIFIES = "Modifies";
+const string PqlKeyword::FN_USES = "Uses";
+const string PqlKeyword::FN_FOLLOWS = "Follows";
+const string PqlKeyword::FN_FOLLOWS_STAR = "Follows*";
+const string PqlKeyword::FN_PARENT = "Parent";
+const string PqlKeyword::FN_PARENT_STAR = "Parent*";
+const string PqlKeyword::FN_NEXT = "Next";
+const string PqlKeyword::FN_NEXT_STAR = "Next*";
+const string PqlKeyword::FN_AFFECTS = "Affects";
+const string PqlKeyword::FN_AFFECTS_STAR = "Affects*";
 
-//static const string FN_CALLS = "Calls";
-//static const string FN_CALLS_STAR = "Calls*";
-//static const string FN_MODIFIES = "Modifies";
-//static const string FN_USES = "Uses";
-//static const string FN_FOLLOWS = "Follows";
-//static const string FN_FOLLOWS_STAR = "Follows*";
-//static const string FN_PARENT = "Parent";
-//static const string FN_PARENT_STAR = "Parent*";
-//static const string FN_NEXT = "Next";
-//static const string FN_NEXT_STAR = "Next*";
-//static const string FN_AFFECTS = "Affects";
-//static const string FN_AFFECTS_STAR = "Affects*";
-//
-////Keywords
-//static const string KEYWORD_STMT = "stmt";
-//static const string KEYWORD_ASSIGN = "assign";
-//static const string KEYWORD_WHILE = "while";
-//static const string KEYWORD_IF = "if";
-//static const string KEYWORD_PROCEDURE = "procedure";
-//static const string KEYWORD_VARIABLE = "variable";
-//static const string KEYWORD_CONSTANT = "constant";
-//static const string KEYWORD_PROGLINE = "prog_line";
-//static const string KEYWORD_SELECT = "select";
-//static const string KEYWORD_SUCH_THAT = "such that";
-//static const string KEYWORD_PATTERN = "pattern";
-//static const string KEYWORD_WITH = "with";
-//static const string KEYWORD_AND = "and";
+//Keywords
+const string PqlKeyword::KEYWORD_STMT = "stmt";
+const string PqlKeyword::KEYWORD_ASSIGN = "assign";
+const string PqlKeyword::KEYWORD_WHILE = "while";
+const string PqlKeyword::KEYWORD_IF = "if";
+const string PqlKeyword::KEYWORD_PROCEDURE = "procedure";
+const string PqlKeyword::KEYWORD_VARIABLE = "variable";
+const string PqlKeyword::KEYWORD_CONSTANT = "constant";
+const string PqlKeyword::KEYWORD_PROGLINE = "prog_line";
+const string PqlKeyword::KEYWORD_SELECT = "select";
+const string PqlKeyword::KEYWORD_SUCH_THAT = "such that";
+const string PqlKeyword::KEYWORD_PATTERN = "pattern";
+const string PqlKeyword::KEYWORD_WITH = "with";
+const string PqlKeyword::KEYWORD_AND = "and";
 
 //Constructor
 PqlKeyword::PqlKeyword()
@@ -92,36 +90,36 @@ bool PqlKeyword::isKeywordExist(string keywordQuery)
 void PqlKeyword::buildFunctionKeywordMap()
 {
 	functionKeywordMap[FN_CALLS] = true;
-	//functionKeywordMap[FN_CALLS_STAR] = true;
-	//functionKeywordMap[FN_MODIFIES] = true;
-	//functionKeywordMap[FN_USES] = true;
-	//functionKeywordMap[FN_FOLLOWS] = true;
-	//functionKeywordMap[FN_FOLLOWS_STAR] = true;
-	//functionKeywordMap[FN_PARENT] = true;
-	//functionKeywordMap[FN_PARENT_STAR] = true;
-	//functionKeywordMap[FN_NEXT] = true;
-	//functionKeywordMap[FN_NEXT_STAR] = true;
-	//functionKeywordMap[FN_AFFECTS] = true;
-	//functionKeywordMap[FN_AFFECTS_STAR] = true;
+	functionKeywordMap[FN_CALLS_STAR] = true;
+	functionKeywordMap[FN_MODIFIES] = true;
+	functionKeywordMap[FN_USES] = true;
+	functionKeywordMap[FN_FOLLOWS] = true;
+	functionKeywordMap[FN_FOLLOWS_STAR] = true;
+	functionKeywordMap[FN_PARENT] = true;
+	functionKeywordMap[FN_PARENT_STAR] = true;
+	functionKeywordMap[FN_NEXT] = true;
+	functionKeywordMap[FN_NEXT_STAR] = true;
+	functionKeywordMap[FN_AFFECTS] = true;
+	functionKeywordMap[FN_AFFECTS_STAR] = true;
 
 }
 
 void PqlKeyword::buildKeywordMap()
 {
-	//keywordMap[KEYWORD_STMT] = true;
-	//keywordMap[KEYWORD_ASSIGN] = true;
-	//keywordMap[KEYWORD_WHILE] = true;
-	//keywordMap[KEYWORD_IF] = true;
-	//keywordMap[KEYWORD_PROCEDURE] = true;
-	//keywordMap[KEYWORD_VARIABLE] = true;
-	//keywordMap[KEYWORD_CONSTANT] = true;
-	//keywordMap[KEYWORD_PROGLINE] = true;
-	//keywordMap[KEYWORD_SELECT] = true;
+	keywordMap[KEYWORD_STMT] = true;
+	keywordMap[KEYWORD_ASSIGN] = true;
+	keywordMap[KEYWORD_WHILE] = true;
+	keywordMap[KEYWORD_IF] = true;
+	keywordMap[KEYWORD_PROCEDURE] = true;
+	keywordMap[KEYWORD_VARIABLE] = true;
+	keywordMap[KEYWORD_CONSTANT] = true;
+	keywordMap[KEYWORD_PROGLINE] = true;
+	keywordMap[KEYWORD_SELECT] = true;
 
-	//keywordMap[KEYWORD_SUCH_THAT] = true;
-	//keywordMap[KEYWORD_PATTERN] = true;
-	//keywordMap[KEYWORD_WITH] = true;
-	//keywordMap[KEYWORD_AND] = true;
+	keywordMap[KEYWORD_SUCH_THAT] = true;
+	keywordMap[KEYWORD_PATTERN] = true;
+	keywordMap[KEYWORD_WITH] = true;
+	keywordMap[KEYWORD_AND] = true;
 }
 
 void PqlKeyword::buildSelectSequenceMap()
