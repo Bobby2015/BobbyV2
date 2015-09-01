@@ -85,22 +85,27 @@ void PqlKeyword::buildKeywordMap()
 	keywordMap[KEYWORD_CONSTANT] = true;
 	keywordMap[KEYWORD_PROGLINE] = true;
 	keywordMap[KEYWORD_SELECT] = true;
+
+	keywordMap[KEYWORD_SUCH_THAT] = true;
+	keywordMap[KEYWORD_PATTERN] = true;
+	keywordMap[KEYWORD_WITH] = true;
+	keywordMap[KEYWORD_AND] = true;
 }
 
 void PqlKeyword::buildSelectSequenceMap()
 {
-	int foo[5];
-	int* bar = foo;
-	selectSequenceMap[KEYWORD_SELECT] = bar;
+	//int foo[5];
+	//int* bar = foo;
+	//selectsequencemap[keyword_select] = bar;
 
-	
-	
-	
-	//selectSequenceMap[KEYWORD_SUCH_THAT] = int[]{ 2, 3 };
-	
-	
-	static const string KEYWORD_SUCH_THAT = "such that";
-	static const string KEYWORD_PATTERN = "pattern";
-	static const string KEYWORD_WITH = "with";
-	static const string KEYWORD_AND = "and";
+	//
+	//
+	//
+	//selectsequencemap[keyword_such_that] = int[]{ 2, 3 };
+	//
+	//
+	//static const string keyword_such_that = "such that";
+	//static const string keyword_pattern = "pattern";
+	//static const string keyword_with = "with";
+	//static const string keyword_and = "and";
 }

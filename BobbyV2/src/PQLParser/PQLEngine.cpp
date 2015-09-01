@@ -50,6 +50,7 @@ bool PqlEngine::evaluateQuery(string query)
 
 	while (stream >> s1)
 	{
+		
 		cout << s1 << endl;
 	}
 
