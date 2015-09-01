@@ -81,6 +81,9 @@
     <ClInclude Include="src\PQLParser\PQLKeyword.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
+    <ClInclude Include="src\Parser\DataTable.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\main.cpp">
@@ -115,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="src\PQLParser\PQLKeyword.cpp">
       <Filter>Source Files\PQLParser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Parser\DataTable.cpp">
+      <Filter>Source Files\Parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
