@@ -81,6 +81,9 @@
     <ClInclude Include="src\PQLParser\PQLKeyword.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
+    <ClInclude Include="src\Parser\DataTable.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
     <ClInclude Include="src\PKB\PBKInterface.h">
       <Filter>Header Files\PKB</Filter>
     </ClInclude>
@@ -122,10 +125,13 @@
     <ClCompile Include="src\PQLParser\PQLKeyword.cpp">
       <Filter>Source Files\PQLParser</Filter>
     </ClCompile>
-    <ClCompile Include="src\PKB\PKBInterface.cpp">
-      <Filter>Source Files\PKB</Filter>
+    <ClCompile Include="src\Parser\DataTable.cpp">
+      <Filter>Source Files\Parser</Filter>
     </ClCompile>
     <ClCompile Include="src\PKB\PKBStorageProcess.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PKB\PKBInterface.cpp">
       <Filter>Source Files\PKB</Filter>
     </ClCompile>
   </ItemGroup>
