@@ -7,15 +7,14 @@ using namespace PKB;
 QueryEngine::QueryEngine()
 {
 
-
 }
 
 QueryEngine::~QueryEngine()
 {
 
-
-
 }
+
+
 
 
 

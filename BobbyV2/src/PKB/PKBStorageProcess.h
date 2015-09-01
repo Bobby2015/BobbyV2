@@ -3,6 +3,10 @@
 #ifndef PKB_PKBSTORAGEPROCESS_H
 #define PKB_PKBSTORAGEPROCESS_H
 
+#include<string>
+
+using namespace std;
+
 namespace PKB 
 {
 	//For PQLParser to query
@@ -12,8 +16,10 @@ namespace PKB
 		QueryEngine();
 		~QueryEngine();
 
-
 	private:
+		//pair<string,string>getCalls(string prod1, string prod2);
+		
+	
 
 	};
 
