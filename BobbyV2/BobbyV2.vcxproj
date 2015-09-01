@@ -22,7 +22,9 @@
     <ClInclude Include="src\Parser\AST.h" />
     <ClInclude Include="src\Parser\DataTable.h" />
     <ClInclude Include="src\Parser\Parser.h" />
+    <ClInclude Include="src\PKB\PBKInterface.h" />
     <ClInclude Include="src\PKB\PKB.h" />
+    <ClInclude Include="src\PKB\PKBStorageProcess.h" />
     <ClInclude Include="src\PQLParser\PQLEngine.h" />
     <ClInclude Include="src\PQLParser\PQLKeyword.h" />
     <ClInclude Include="src\PQLParser\PQLParser.h" />
@@ -37,6 +39,8 @@
     <ClCompile Include="src\Parser\DataTable.cpp" />
     <ClCompile Include="src\Parser\Parser.cpp" />
     <ClCompile Include="src\PKB\PKB.cpp" />
+    <ClCompile Include="src\PKB\PKBInterface.cpp" />
+    <ClCompile Include="src\PKB\PKBStorageProcess.cpp" />
     <ClCompile Include="src\PQLParser\PQLEngine.cpp" />
     <ClCompile Include="src\PQLParser\PQLKeyword.cpp" />
     <ClCompile Include="src\PQLParser\PQLParser.cpp" />
