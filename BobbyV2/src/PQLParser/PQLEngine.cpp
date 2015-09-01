@@ -46,12 +46,10 @@ bool PqlEngine::evaluateQuery(string query)
 	bool isSuccess = false;
 
 	istringstream stream(query);
+	string s1;
 
-	while (!stream.eof())
+	while (stream >> s1)
 	{
-		string s1;
-
-		stream >> s1;
 		cout << s1 << endl;
 	}
 
