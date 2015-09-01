@@ -18,10 +18,12 @@ public:
 	
 private:
 	PqlKeyword pqlKeyword;
+	vector<pair<string, string>> variableList;
 
 	bool validateQuery(string);
 	bool evaluateQuery(string);
 	bool identifySingleQuery(string);
+	bool evaluateAssignQuery(string);
 	vector<string> separateQuery(string);
 	string fixWhitespace(string);
 

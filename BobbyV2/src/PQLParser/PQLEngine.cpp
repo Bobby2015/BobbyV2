@@ -28,6 +28,7 @@ bool PqlEngine::executeQuery(string query)
 	
 	if (isSuccess == true)
 	{
+		variableList.clear();
 		evaluateQuery(query);
 	}
 
@@ -57,31 +58,16 @@ bool PqlEngine::evaluateQuery(string query)
 		// cout << separatedQuery[i] << endl;
 
 		string currQuery = separatedQuery[i];
-
 		bool isSuccess = identifySingleQuery(currQuery);
 	}
 
-
-	/*istringstream stream(query);
-	PqlKeyword pqlKeyword;
-	string currWord;
-
-	while (stream >> currWord)
+	//print out the values in variableList (for verification)
+	for (int i = 0; i < variableList.size(); i++)
 	{
-		bool isKeyword = pqlKeyword.isKeywordExist(currWord);
-
-		if (isKeyword)
-		{
-			if (currWord.compare(PqlKeyword::KEYWORD_SELECT) == 0) {
-				cout << "it is a select statement" << endl;
-			}
-			else {
-
-			}
-			cout << currWord << endl;
-		}
-		
-	}*/
+		pair <string, string> currPair;
+		currPair = variableList[i];
+		cout << i << ": <" << currPair.first << " - " << currPair.second << ">" << endl;
+	}
 
 	return isSuccess;
 }
@@ -104,7 +90,9 @@ bool PqlEngine::identifySingleQuery(string query)
 			//execute stmt
 		}
 		else if (currWord.compare(PqlKeyword::KEYWORD_ASSIGN) == 0) {
-			//execute assign
+			string remainingValue;
+			getline(stream, remainingValue);
+			isSuccess = evaluateAssignQuery(remainingValue);
 		}
 		else if (currWord.compare(PqlKeyword::KEYWORD_WHILE) == 0) {
 			//execute while
@@ -127,6 +115,26 @@ bool PqlEngine::identifySingleQuery(string query)
 	}
 	else {
 		isSuccess = false;
+	}
+
+	return isSuccess;
+}
+
+bool PqlEngine::evaluateAssignQuery(string query)
+{
+	bool isSuccess = false;
+
+	// cout << "remaining query" << query << endl;
+
+	istringstream stream(query);
+	PqlKeyword pqlKeyword;
+	string currWord;
+
+	while (stream >> currWord)
+	{
+		pair <string, string> currAssignment;
+		currAssignment = make_pair(PqlKeyword::KEYWORD_ASSIGN, currWord);
+		variableList.push_back(currAssignment);
 	}
 
 	return isSuccess;
@@ -158,8 +166,8 @@ string PqlEngine::fixWhitespace(string unfixed)
 	regex rCommaSpace(",\\s+");
 
 	cleaned = regex_replace(unfixed, rSpace, " ");
-	cleaned = regex_replace(cleaned, rSpaceComma, ",");
-	cleaned = regex_replace(cleaned, rCommaSpace, ", ");
+	cleaned = regex_replace(cleaned, rSpaceComma, " ");
+	cleaned = regex_replace(cleaned, rCommaSpace, " ");
 
 	return cleaned;
 }
