@@ -81,13 +81,13 @@
     <ClInclude Include="src\PQLParser\PQLKeyword.h">
       <Filter>Header Files\PQLParser</Filter>
     </ClInclude>
-    <ClInclude Include="src\PKB\PKBStorageProcess.h">
-      <Filter>Header Files\PKB</Filter>
-    </ClInclude>
     <ClInclude Include="src\PKB\DataTable.h">
       <Filter>Header Files\PKB</Filter>
     </ClInclude>
     <ClInclude Include="src\PKB\PKBInterface.h">
+      <Filter>Header Files\PKB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PKB\PKBEngine.h">
       <Filter>Header Files\PKB</Filter>
     </ClInclude>
   </ItemGroup>
@@ -125,13 +125,13 @@
     <ClCompile Include="src\PQLParser\PQLKeyword.cpp">
       <Filter>Source Files\PQLParser</Filter>
     </ClCompile>
-    <ClCompile Include="src\PKB\PKBStorageProcess.cpp">
-      <Filter>Source Files\PKB</Filter>
-    </ClCompile>
     <ClCompile Include="src\PKB\PKBInterface.cpp">
       <Filter>Source Files\PKB</Filter>
     </ClCompile>
     <ClCompile Include="src\PKB\DataTable.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PKB\PKBEngine.cpp">
       <Filter>Source Files\PKB</Filter>
     </ClCompile>
   </ItemGroup>
