@@ -4,14 +4,16 @@
 #include <string>
 #include <regex>
 
+using namespace std;
+
 class PQLValidator
 {
 public:
-	bool validateQuery(std::string);
+	bool validateQuery(string);
 
 private:
-	bool syntaxValidator(std::string);
-	bool semanticValidator(std::string);
+	bool syntaxValidator(string);
+	bool semanticValidator(string);
 
 }; //PQLValidator
 

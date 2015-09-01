@@ -5,16 +5,18 @@
 
 #include "PQLValidator.h"
 
+using namespace std;
+
 class PqlEngine
 {
 public:
 	PqlEngine();
 	~PqlEngine();
-	bool executeQuery(std::string);
+	bool executeQuery(string);
 	
 private:
-	bool validateQuery(std::string);
-	bool evaluateQuery(std::string);
+	bool validateQuery(string);
+	bool evaluateQuery(string);
 
 }; // PqlEngine
 

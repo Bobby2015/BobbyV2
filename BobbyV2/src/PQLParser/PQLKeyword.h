@@ -11,9 +11,9 @@ class PqlKeyword
 public:
 	PqlKeyword();
 	~PqlKeyword();
-	bool isFunctionKeywordExist(std::string);
-	bool isKeywordExist(std::string);
-	bool isValidKeywordSequence(vector<std::string>);
+	bool isFunctionKeywordExist(string);
+	bool isKeywordExist(string);
+	bool isValidKeywordSequence(vector<string>);
 
 private:
 	void buildFunctionKeywordMap();

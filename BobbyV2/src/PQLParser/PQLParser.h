@@ -5,12 +5,14 @@
 
 #include "PQLEngine.h"
 
+using namespace std;
+
 class PqlParserFacade
 {
 public:
 	PqlParserFacade();
 	~PqlParserFacade();
-	bool executeQuery(std::string);
+	bool executeQuery(string);
 
 private:
 
