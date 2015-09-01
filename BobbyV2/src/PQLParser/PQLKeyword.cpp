@@ -1,12 +1,42 @@
 #include "PQLKeyword.h"
 
 #include <map>
+#include <iostream>
 
 using namespace std;
 
 map<string, bool> functionKeywordMap;
 map<string, bool> keywordMap;
 map<string, int*> selectSequenceMap;
+
+//Function Keywords
+static const string FN_CALLS = "Calls";
+static const string FN_CALLS_STAR = "Calls*";
+static const string FN_MODIFIES = "Modifies";
+static const string FN_USES = "Uses";
+static const string FN_FOLLOWS = "Follows";
+static const string FN_FOLLOWS_STAR = "Follows*";
+static const string FN_PARENT = "Parent";
+static const string FN_PARENT_STAR = "Parent*";
+static const string FN_NEXT = "Next";
+static const string FN_NEXT_STAR = "Next*";
+static const string FN_AFFECTS = "Affects";
+static const string FN_AFFECTS_STAR = "Affects*";
+
+//Keywords
+static const string KEYWORD_STMT = "stmt";
+static const string KEYWORD_ASSIGN = "assign";
+static const string KEYWORD_WHILE = "while";
+static const string KEYWORD_IF = "if";
+static const string KEYWORD_PROCEDURE = "procedure";
+static const string KEYWORD_VARIABLE = "variable";
+static const string KEYWORD_CONSTANT = "constant";
+static const string KEYWORD_PROGLINE = "prog_line";
+static const string KEYWORD_SELECT = "select";
+static const string KEYWORD_SUCH_THAT = "such that";
+static const string KEYWORD_PATTERN = "pattern";
+static const string KEYWORD_WITH = "with";
+static const string KEYWORD_AND = "and";
 
 //Constructor
 PqlKeyword::PqlKeyword()
@@ -25,9 +55,9 @@ PqlKeyword::~PqlKeyword()
 bool PqlKeyword::isFunctionKeywordExist(string keywordQuery)
 {
 	bool isFound = false;
-	auto search = keywordMap.find(keywordQuery);
+	auto search = functionKeywordMap.find(keywordQuery);
 
-	if (search != keywordMap.end())
+	if (search != functionKeywordMap.end())
 	{
 		isFound = true;
 	}
@@ -47,9 +77,9 @@ bool PqlKeyword::isValidKeywordSequence(vector<string> keywordList)
 bool PqlKeyword::isKeywordExist(string keywordQuery)
 {
 	bool isFound = false;
-	auto search = functionKeywordMap.find(keywordQuery);
+	auto search = keywordMap.find(keywordQuery);
 
-	if (search != functionKeywordMap.end())
+	if (search != keywordMap.end())
 	{
 		isFound = true;
 	}

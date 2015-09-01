@@ -47,15 +47,3 @@ bool QueryInterface::compareCalls(string procedure1, string procedure2)
 }
 // FOR CALLS - END
 
-
-// FOR MODIFIES - START
-QueryInterface::~QueryInterface()
-{
-
-}
-
-
-
-
-
-

@@ -1,4 +1,5 @@
 #include "PQLEngine.h"
+
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -46,12 +47,24 @@ bool PqlEngine::evaluateQuery(string query)
 	bool isSuccess = false;
 
 	istringstream stream(query);
-	string s1;
+	PqlKeyword pqlKeyword;
+	string currWord;
 
-	while (stream >> s1)
+	while (stream >> currWord)
 	{
+		bool isKeyword = pqlKeyword.isKeywordExist(currWord);
+
+		if (isKeyword)
+		{
+			if (currWord.compare(PqlKeyword::KEYWORD_SELECT) == 0) {
+				cout << "it is a select statement";
+			}
+			else {
+
+			}
+			cout << currWord << endl;
+		}
 		
-		cout << s1 << endl;
 	}
 
 	return isSuccess;

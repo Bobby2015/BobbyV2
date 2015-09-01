@@ -4,6 +4,7 @@
 #include <string>
 
 #include "PQLValidator.h"
+#include "PQLKeyword.h"
 
 using namespace std;
 
