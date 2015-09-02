@@ -97,9 +97,10 @@ void CLI::parseProgSrcFile()
 	cout << "Enter program source file name: ";
 	getline(cin, fileName);
 
-	//vector<char> fileContents = fileProcessor.convertFileContentsToCharArray(fileName);
-	string fileContentString = fileProcessor.copyFileContentsToString(fileName);
-	parser.concreteSyntaxValidator(fileContentString);
+	if (fileProcessor.fileExists(fileName)) {
+		string fileContentString = fileProcessor.copyFileContentsToString(fileName);
+		parser.concreteSyntaxValidator(fileContentString);
+	}
 	
 	// insert code for file parsing
 	cout << "Parsing file to Program Knowledge Base..." << endl;

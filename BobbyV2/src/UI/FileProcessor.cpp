@@ -38,29 +38,22 @@ bool FileProcessor::fileExists(string &fileName)
 string FileProcessor::copyFileContentsToString(string &fileName)
 {
 
-	if (!fileExists(fileName))
+	cout << "[FileProcessor] Processing contents of " + fileName + "..." << endl;
+
+	ifstream in(fileName, ios::in | ios::binary);
+	if (in)	
 	{
-		cout << "[FileProcessor] File does not exist!" << endl;
-	}
+		string contents;
+		in.seekg(0, ios::end);
+		contents.resize(in.tellg());
+		in.seekg(0, ios::beg);
+		in.read(&contents[0], contents.size());
+		in.close();
 
-	else
-	{
-		cout << "[FileProcessor] Processing contents of " + fileName + "..." << endl;
-
-		ifstream in(fileName, ios::in | ios::binary);
-		if (in)
-		{
-			string contents;
-			in.seekg(0, ios::end);
-			contents.resize(in.tellg());
-			in.seekg(0, ios::beg);
-			in.read(&contents[0], contents.size());
-			in.close();
-
-			return contents;
-		}
-		else
-			throw(errno);
+		return contents;
+	} 
+	else {
+		throw(errno);
 	}
 }
 

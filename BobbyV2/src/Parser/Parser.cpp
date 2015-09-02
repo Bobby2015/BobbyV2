@@ -50,25 +50,8 @@ bool Parse::concreteSyntaxValidator(string contents) {
 
 	// Add newline to {
 	addNewLine("{", "{\n", contentPointer);
-
-	
-	// Add newline to }
-	string from1("}");
-	string to1("}\n");
-	size_t start_pos1 = 0;
-	while ((start_pos1 = contents.find(from1, start_pos1)) != std::string::npos) {
-		contents.replace(start_pos1, from1.length(), to1);
-		start_pos1 += to1.length(); // Handles case where 'to' is a substring of 'from'
-	}
-
-	// Add newline to ;
-	string from2(";");
-	string to2(";\n");
-	size_t start_pos2 = 0;
-	while ((start_pos2 = contents.find(from2, start_pos2)) != std::string::npos) {
-		contents.replace(start_pos2, from2.length(), to2);
-		start_pos2 += to2.length(); // Handles case where 'to' is a substring of 'from'
-	}
+	addNewLine("}", "}\n", contentPointer);
+	addNewLine(";", ";\n", contentPointer);
 
 	// Implement regex
 	/*
