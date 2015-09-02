@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
+
 using namespace PKBEngine;
 
 QueryEngine::QueryEngine()
@@ -56,11 +57,21 @@ vector<string>  QueryEngine::getModifies(int select, string var) //select statem
 {
 	vector<string> list;
 	list.push_back("empty");
-	//get var map table
 	
+	
+	DataTables::TableWrapper table;
+
+	//get var map table
+	DataTables::VarMapTable varMapTable=table.getVMapTable();
+
 	//get vartable
+	DataTables::VarTable varTable = table.getVarTable();
 
 	//get statement line
+	map<string,int> mapObj =  varMapTable.getMap();
+	int index = mapObj.at(var);
+
+	
 
 	//store in vector
 
