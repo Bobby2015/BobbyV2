@@ -22,6 +22,7 @@ const string PqlKeyword::FN_NEXT = "Next";
 const string PqlKeyword::FN_NEXT_STAR = "Next*";
 const string PqlKeyword::FN_AFFECTS = "Affects";
 const string PqlKeyword::FN_AFFECTS_STAR = "Affects*";
+const string PqlKeyword::FN_PATTERN = "pattern";
 
 //Keywords
 const string PqlKeyword::KEYWORD_STMT = "stmt";
@@ -34,9 +35,14 @@ const string PqlKeyword::KEYWORD_CONSTANT = "constant";
 const string PqlKeyword::KEYWORD_PROGLINE = "prog_line";
 const string PqlKeyword::KEYWORD_SELECT = "select";
 const string PqlKeyword::KEYWORD_SUCH_THAT = "such that";
-const string PqlKeyword::KEYWORD_PATTERN = "pattern";
+const string PqlKeyword::KEYWORD_SUCH = "such";
+const string PqlKeyword::KEYWORD_THAT = "that";
 const string PqlKeyword::KEYWORD_WITH = "with";
 const string PqlKeyword::KEYWORD_AND = "and";
+
+//keyword format
+const string PqlKeyword::KEYWORD_OPEN_PARANTHESIS = "(";
+const string PqlKeyword::KEYWORD_CLOSE_PARANTHESIS = ")";
 
 //Constructor
 PqlKeyword::PqlKeyword()
@@ -101,6 +107,7 @@ void PqlKeyword::buildFunctionKeywordMap()
 	functionKeywordMap[FN_NEXT_STAR] = true;
 	functionKeywordMap[FN_AFFECTS] = true;
 	functionKeywordMap[FN_AFFECTS_STAR] = true;
+	functionKeywordMap[FN_PATTERN] = true;
 
 }
 
@@ -117,7 +124,8 @@ void PqlKeyword::buildKeywordMap()
 	keywordMap[KEYWORD_SELECT] = true;
 
 	keywordMap[KEYWORD_SUCH_THAT] = true;
-	keywordMap[KEYWORD_PATTERN] = true;
+	keywordMap[KEYWORD_SUCH] = true;
+	keywordMap[KEYWORD_THAT] = true;
 	keywordMap[KEYWORD_WITH] = true;
 	keywordMap[KEYWORD_AND] = true;
 }

@@ -19,11 +19,17 @@ public:
 private:
 	PqlKeyword pqlKeyword;
 	vector<pair<string, string>> variableList;
+	vector<string> queryVariableList;
+	vector<pair<pair<string, string>, pair<string, string>>> queryFunctionList;
 
+	void resetVariableList();
 	bool validateQuery(string);
-	bool evaluateQuery(string);
-	bool identifySingleQuery(string);
-	bool evaluateAssignQuery(string);
+	bool parseQuery(string);
+	bool parseSingleQuery(string);
+	bool parseVarQuery(string, string);
+	bool parseSelectQuery(string);
+	bool parseSelectQueryFunction(string);
+	string evaluateQuery();
 	vector<string> separateQuery(string);
 	string fixWhitespace(string);
 

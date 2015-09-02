@@ -28,6 +28,7 @@ public:
 	static const string FN_NEXT_STAR;
 	static const string FN_AFFECTS;
 	static const string FN_AFFECTS_STAR;
+	static const string FN_PATTERN;
 
 	//Keywords
 	static const string KEYWORD_STMT;
@@ -40,9 +41,14 @@ public:
 	static const string KEYWORD_PROGLINE;
 	static const string KEYWORD_SELECT;
 	static const string KEYWORD_SUCH_THAT;
-	static const string KEYWORD_PATTERN;
+	static const string KEYWORD_SUCH;
+	static const string KEYWORD_THAT;
 	static const string KEYWORD_WITH;
 	static const string KEYWORD_AND;
+
+	//keyword format
+	static const string KEYWORD_OPEN_PARANTHESIS;
+	static const string KEYWORD_CLOSE_PARANTHESIS;
 
 private:
 	void buildFunctionKeywordMap();
