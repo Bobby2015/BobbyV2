@@ -4,10 +4,11 @@
 #define PKB_PKBSTORAGEPROCESS_H
 
 #include<string>
+#include<vector>
 
 using namespace std;
 
-namespace PKB 
+namespace PKBEngine
 {
 	//For PQLParser to query
 	class QueryEngine
@@ -15,11 +16,29 @@ namespace PKB
 	public:
 		QueryEngine();
 		~QueryEngine();
+		//for filter
+		vector<string> assignStatement(vector<string>list);
+		vector<string> containerStatement(vector<string>list);
+		vector<string> callStament(vector<string>list);
+
+		//for calls
+		vector<string> getCalls(string prod, int select);
+		vector<string> getCalls(int select, string prod);
+		vector<string> getCalls();
+		bool getCalls(string prod1, string prod2);
+
+		//for modifies
+		vector<string> getModifies(int select, string var);
+		vector<string> getModifies(string stmt, int select);
+		bool getModifiesProd(string prod, string var);
+		bool getModifiesStmt(string stmt, string var);
+
+		//for uses
+		
 
 	private:
-		//vector<string>::getCalls(string prod1, string prod2);
 		
-	
+		
 
 	};
 

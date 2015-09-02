@@ -7,184 +7,164 @@
 
 using namespace std;
 // include all the table process
-class TableWrapper
-{
-public:
+namespace DataTables {
 
-
-private:
-
-
-}; //TableWrapper
-
-// Map variables to an ID
-class VarMapTable
-{
-public:
-
-private:
-	// Key - variable
-	map<string, int> varMap;
-};
-
-// VarTable with mod/uses
-class VarTable
-{
-public:
-	VarTable();
-	~VarTable();
-
-private:
-	struct values
+	// Map variables to an ID
+	class VarMapTable
 	{
-		int lineNo;
-		int modifies;
-		int uses;
+	public:
+		VarMapTable();
+		~VarMapTable();
+		const map<string, int> getMap();
+	private:
+		// Key - variable
+		map<string, int> varMap;
 	};
-	// Key - varID
-	map<int, values> varTableMap;
-}; // VarTable
 
-
-class ProcedureTable
-{
-public:
-	ProcedureTable();
-	~ProcedureTable();
-private:
-	struct values
+	// VarTable with mod/uses
+	class VarTable
 	{
-		string processName;
-		int minStatementNo;
-		int maxStatementNo;
-	};
-	// Key - procedure ID
-	map<int, values> procTableMap;
-}; // ProcedureTable
+	public:
+		VarTable();
+		~VarTable();
 
-class StatementTable
-{
-public:
-	StatementTable();
-	~StatementTable();
-private:
-	enum STATEMENT_TYPE {
-		ASSIGNMENT,
-		IF,
-		WHILE
-		//etc will populate
-	};
-	struct values
+	private:
+		struct values
+		{
+			int stmtNo;
+			int modifies;
+			int uses;
+		};
+		// Key - varID
+		map<int, values> varTableMap;
+	}; // VarTable
+
+	class TableWrapper
 	{
-		STATEMENT_TYPE stmtType;
-		string stmtLHS;
-		string stmtRHS;
-	};
-	// Key - lineNo
-	map<int, values> stmtTableMap;
-}; // StatementTable
+	public:
+		TableWrapper();
+		VarMapTable getVMapTable();
+		VarTable getVarTable();
 
-class ConstantTableValue
-{
-public:
+	private:
+		VarMapTable vMapTable;
+		VarTable vTable;
 
-private:
-	// Key - lineNo
-	map<int, int> constTableMap;
-}; // ConstantTableValue
+	}; //TableWrapper
 
-class ConstantTableLine
-{
-public:
 
-private:
-}; // ConstantTableLine
 
-class CallsTableProc
-{
-public:
+	class ProcedureTable
+	{
+	public:
+		ProcedureTable();
+		~ProcedureTable();
+	private:
+		struct values
+		{
+			string processName;
+			int minStatementNo;
+			int maxStatementNo;
+		};
+		// Key - procedure ID
+		map<int, values> procTableMap;
+	}; // ProcedureTable
 
-private:
-}; // CallsTableProc
+	class StatementTable
+	{
+	public:
+		StatementTable();
+		~StatementTable();
+	private:
+		enum STATEMENT_TYPE {
+			ASSIGNMENT,
+			IF,
+			WHILE
+			//etc will populate
+		};
+		struct values
+		{
+			STATEMENT_TYPE stmtType;
+			string stmtLHS;
+			string stmtRHS;
+		};
+		// Key - lineNo
+		map<int, values> stmtTableMap;
+	}; // StatementTable
 
-class CallsTableLine
-{
-public:
+	class ConstantTableValue
+	{
+	public:
 
-private:
-}; // CallsTableLine
+	private:
+		// Key - lineNo
+		map<int, int> constTableMap;
+	}; // ConstantTableValue
 
-class ModTableVar
-{
-public:
+	class ConstantTableLine
+	{
+	public:
 
-private:
-}; // ModTableVar
+	private:
+	}; // ConstantTableLine
 
-class ModTableLine
-{
-public:
+	class CallsTableProc
+	{
+	public:
 
-private:
-}; // ModTableLine
+	private:
+	}; // CallsTableProc
 
-class UsesTableVar
-{
-public:
+	class CallsTableLine
+	{
+	public:
 
-private:
-}; // UsesTableVar
+	private:
+	}; // CallsTableLine
 
-class UsesTableLine
-{
-public:
+	class FollowsTableNext
+	{
+	public:
 
-private:
-}; // UsesTableLine
+	private:
+	}; // FollowsTableNext
 
-class FollowsTableNext
-{
-public:
+	   // I think only 1 table is enough tho
+	class FollowsTablePrev
+	{
+	public:
 
-private:
-}; // FollowsTableNext
+	private:
+	}; // FollowsTablePrev
 
-   // I think only 1 table is enough tho
-class FollowsTablePrev
-{
-public:
+	class NextTableNext
+	{
+	public:
 
-private:
-}; // FollowsTablePrev
+	private:
+	}; // NextTableNext
 
-class NextTableNext
-{
-public:
+	   // same for this
+	class NextTablePrev
+	{
+	public:
 
-private:
-}; // NextTableNext
+	private:
+	}; // NextTablePrev
 
-   // same for this
-class NextTablePrev
-{
-public:
+	   // this needs redesign i think
+	class ParentTable
+	{
+	public:
 
-private:
-}; // NextTablePrev
+	private:
+	}; // ParentTable
 
-   // this needs redesign i think
-class ParentTable
-{
-public:
+	class ChildTable
+	{
+	public:
 
-private:
-}; // ParentTable
-
-class ChildTable
-{
-public:
-
-private:
-}; // ChildTable
-
+	private:
+	}; // ChildTable
+} // namespace DataTables
 #endif // PKB_DATATABLE_H

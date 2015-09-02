@@ -20,7 +20,8 @@ QueryInterface::~QueryInterface()
 // FOR CALLS - START
 vector<string> QueryInterface::getCalls(pair<string, string> procedure1, pair<string, string> procedure2)
 {
-	std::vector<string> procedureList;
+	vector<string> procedureList;
+	procedureList.push_back("eempty");
 
 	//2 cases here (p, "prod"), ("prod", p)
 
@@ -29,8 +30,8 @@ vector<string> QueryInterface::getCalls(pair<string, string> procedure1, pair<st
 
 vector<string> QueryInterface::getAllCalls()
 {
-	std::vector<string> procedureList;
-
+	vector<string> procedureList;
+	procedureList.push_back("eempty");
 	//return all procedure
 
 	return procedureList;
@@ -47,3 +48,40 @@ bool QueryInterface::compareCalls(string procedure1, string procedure2)
 }
 // FOR CALLS - END
 
+// FOR MODIFIES - START
+//<string1, string2>
+//string1 : assign, "procedure", stmt(if/while) , var, wildcard
+//string2 : predef or select
+
+vector<string> QueryInterface::getModifies(pair<string, string> pair1, pair<string, string> pair2)
+{
+	vector<string> procedureList;
+	procedureList.push_back("eempty");
+	if (pair1.second == "predef")
+	{
+		
+
+	}
+	if (pair2.second == "predef")
+	{
+
+
+	}
+	return procedureList;
+}
+
+bool QueryInterface::compareModifies(string stmt1, string var1) 
+{
+	//total 2 type of comparison
+	// "procedure" vs var
+
+	// stmt# vs var
+	bool isModify = false;
+
+
+
+	return isModify;
+
+}
+
+// FOR MODIFIES END
